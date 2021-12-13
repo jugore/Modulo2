@@ -1,0 +1,17 @@
+<div class="body">
+    <div class="container-all"> 
+        <h3>To Do List</h3>
+        <div id="global">
+            <div id="listasks">
+                
+                <app-task *ngFor="let task of this.taskService.tasksList" ngDefaultControl  [nameTask]="task.taskdescription" (buttonSelected)="deleteTask(task.id)"></app-task>
+    
+            </div>
+        </div> 
+        <div class="input-group mb-3">
+            <input type="text" [(ngModel)]="taskInput" id="task-item" class="form-control" placeholder="Task" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button"  id="button-addon2" (click)="addTask()">Agregar</button>
+    
+          </div>
+    </div>   
+</div>
