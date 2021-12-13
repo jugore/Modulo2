@@ -1,0 +1,23 @@
+
+<div class="row">
+    <div class="col-4 centercol">
+        <app-btn-pink [name]='"Regresar"' (buttonSelected)="returnToLogin()"></app-btn-pink>
+    </div>
+    <div class="col-4 centercol">
+        <app-logo></app-logo>
+        <div class="mainInputs">
+
+            <h2 >Registrarse</h2>
+            <div class="inputsdata">
+                <app-input ngDefaultControl [(ngModel)]="userName" [placeHolder]='"Nickname"' [img]="'../../assets/user-icon.svg'"  [inputType]="'text'" ></app-input>
+                <app-input ngDefaultControl [(ngModel)]="userEmail" [placeHolder]='"Correo electronico"' [img]="'../../assets/email.svg'"  [inputType]="'email'" ></app-input>
+                <app-input ngDefaultControl [(ngModel)]="userPassword" [placeHolder]='"Contraseña"' [img]="'../../assets/password.svg'"  [inputType]="'password'" ></app-input>
+            </div>
+            <app-btn-pink [name]='"Registrar"' (buttonSelected)="onUserNameCreate()"></app-btn-pink>
+        </div>
+    </div>
+    <div class="col-4">
+    
+    </div>
+    
+</div>

@@ -1,0 +1,15 @@
+.logo{
+    width: 3vw;
+    height: 6vh;
+    border-radius: 4vh;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.7vw;
+    width: 18vw;
+    height: 7.5vh;
+    border-radius: 4vh;
+    background-color: rgb(244, 64, 250);
+}

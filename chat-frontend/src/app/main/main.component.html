@@ -1,0 +1,30 @@
+<div class="row gap">
+    
+    <div class="row">
+        <div class="col-3 centercenter">
+            <app-btn-pink [name]="'Cerrar Sesión'" (buttonSelected)="signOut()"></app-btn-pink>
+        </div>
+        <div class="col-6 centercenter">
+            <app-logo></app-logo>
+        </div>
+        <div class="col-3 centercenter">
+            <app-btn-pink [name]="'Ver información'" (buttonSelected)="goToUpdateUser()"></app-btn-pink>
+        </div>  
+    </div>
+    <div class="row">
+        <div class="col centercenter">
+            <div class="mainInputs">
+                <h3>Lista de Grupos Chat</h3>
+                <div class="overflow-auto gap contentchats">
+                    <div *ngFor="let item of chatService.groups">
+                        <app-group-item *ngIf="item.belongs==true" [nameGroup]="item.name" [option]="'Ingresar'" (buttonSelected)="GetintoGroup(item.name)"></app-group-item>
+                        <app-group-item *ngIf="item.belongs==false" [nameGroup]="item.name" [option]="'Registrarse'" (buttonSelected)="RegisterInGroup(item.name)"></app-group-item>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,49 @@
+
+
+<div class="row gap">
+    
+    <div class="row">
+        <div class="col-3 centercenter">
+            <app-btn-pink [name]="'Cerrar Sesión'" (buttonSelected)="signOut()"></app-btn-pink>
+        </div>
+        <div class="col-6 centercenter">
+            <app-logo></app-logo>
+        </div>
+        <div class="col-3 centercenter">
+            <app-btn-pink [name]="'Regresar'" (buttonSelected)="comeBack()"></app-btn-pink>
+        </div>  
+    </div>
+    <div class="row">
+
+        <div class="col centercenter">
+            <div class="mainInputs">
+
+                <h3>Cambio de contraseña</h3>
+                <div class="inputsdata">
+                    <app-input ngDefaultControl [(ngModel)]="password" [placeHolder]='"Ingrese contraseña actual"' [img]="'../../assets/password.svg'"  [inputType]="'password'" ></app-input>
+                    <app-input ngDefaultControl [(ngModel)]="newPassword" [placeHolder]='"Nueva contraseña"' [img]="'../../assets/password.svg'"  [inputType]="'password'" ></app-input>
+                    <app-input ngDefaultControl [(ngModel)]="newPassword2" [placeHolder]='"Confirmar nueva contraseña"' [img]="'../../assets/password.svg'"  [inputType]="'password'" ></app-input>
+
+                </div>
+                <app-btn-pink [name]='"Cambiar contraseña"'(buttonSelected)="updatePassword()" ></app-btn-pink>
+            </div>
+
+        </div>
+        <div class="col centercenter">
+            <div class="mainInputs">
+
+                <h3>Cambio de imagen</h3>
+                <img class="imgLogo" src={{imageUrl}} alt="">
+                <div class="inputsdata">
+                        <app-input ngDefaultControl [(ngModel)]="newImage" [placeHolder]='"Nombre de la imagen"' [img]="'../../assets/upload-solid.svg'"  [inputType]="'text'" ></app-input>
+                </div>
+                <app-btn-pink [name]='"Subir Imagen"' (buttonSelected)="updateImage()" ></app-btn-pink>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+
+

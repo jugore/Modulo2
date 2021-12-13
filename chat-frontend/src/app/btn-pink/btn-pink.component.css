@@ -1,0 +1,9 @@
+.btnPink{
+    width: 200px;
+    background-color: rgb(211, 0, 123);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-size: 20px;
+}
